@@ -84,7 +84,20 @@ function verificarLetra(event) {
     }
     if (intentos == 7) {
       alert("GAME OVER!!");
-      generarPalabra();
+
+      p1= document.createElement('p');   
+      p1.textContent='La palabra era:' 
+      p1.style= 'text-align:center;'
+
+      p2= document.createElement('p');    
+      p2.id='respuesta';
+      p2.textContent = palabra.toUpperCase();
+
+      letras = document.getElementById("letras");
+
+      letras.appendChild(p1);
+      letras.appendChild(p2);
+
     }
 
     if (aciertos == palabra.length) {
