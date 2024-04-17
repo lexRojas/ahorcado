@@ -25,7 +25,12 @@ body{
 
 }
 
-
+#ahorcado{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    margin-top: 10px;
+}
 
 
 .titulo{
