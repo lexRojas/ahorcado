@@ -105,7 +105,10 @@ function verificarLetra(miLetra) {
 }
 
 function validateInput(input) {
-  var regex = /^[^0-9]*$/;
+  // var regex = /^[^0-9]*$/;
+
+  var regex=/[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/;
+
   var isValid = regex.test(input.value);
 
   if (!isValid) {
