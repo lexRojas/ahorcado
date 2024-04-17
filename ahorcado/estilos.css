@@ -1,0 +1,146 @@
+:root{
+    --color-top: rgb(63, 67, 117);
+    --color-center: rgb(174, 247, 255);
+    --color-button: rgb(3, 3, 104);
+    --color-button-hover: rgb(174, 170, 237);
+}
+
+
+
+
+body{
+    background-color: rgb(144, 145, 145);
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 150px auto 100px;
+    width: 50%;
+    margin: auto;
+    background-color: var(--color-center);
+    border-radius: 15px;
+    border: solid 1px black;
+    
+
+}
+
+
+
+
+.titulo{
+
+
+    grid-row: 1 ;
+    grid-column: 1/-1;
+    background: linear-gradient(var(--color-top), var(--color-center));
+    text-align: center;
+    border-start-start-radius: 15px;
+    border-start-end-radius: 15px;
+    
+
+}
+
+.formulario{
+    grid-row: 2;
+    grid-column: 1;
+    margin-left: 10px;
+}
+
+.frases{
+    grid-row: 2;
+    grid-column: 2;
+    margin: 20px;
+    background-color: beige;
+    box-shadow: 1px 1px 13px brown;
+    height: 220px;
+    overflow-y: scroll;
+    text-indent: 10px;
+}
+
+.panel{
+    display: flex;
+    grid-row: 3;
+    grid-column: 1/-1;
+    align-items: center;
+    justify-content:space-evenly;
+    background: linear-gradient(var(--color-center), var(--color-top));
+    border-end-end-radius: 15px;
+    border-end-start-radius: 15px;
+}
+
+
+.fieldletra{
+    width: 20px;
+    padding: 4px;
+    border: none;
+    margin: 1px 2px;
+    border-bottom: solid 2px black;
+    font-size: large;
+    text-transform: capitalize;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#foto{
+    width: 200px;
+    height: 220px;
+    margin-right: 20px;
+}
+
+button{
+
+    border: solid 2px var(--color-button);
+    background-color: var(--color-button);
+    padding: 10px 20px;
+    font-size: larger;
+    font-weight: 600;
+    color: antiquewhite;
+    border-radius: 15px;
+    width: 140px;
+    
+
+
+}
+
+button:hover{
+
+    border: solid 2px var(--color-button-hover);
+    background-color: var(--color-button-hover);
+    color: black;
+    transition: 1s;
+
+}
+
+
+@media  (width <= 900px) {
+    .contenedor{
+        width: 95%;
+    }
+}
+
+@media  (width <= 500px) {
+    .contenedor{
+        grid-template-columns: 100%;
+        grid-template-rows: 150px auto auto 100px;
+    }  
+    .titulo{
+        grid-row: 1 ;
+        grid-column: 1;
+    }    
+    .formulario{
+        grid-row: 2;
+        grid-column: 1;
+    }
+        
+    .frases{
+        grid-row: 3;
+        grid-column: 1;
+        margin: 10px;
+    }
+    
+    .panel{
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
