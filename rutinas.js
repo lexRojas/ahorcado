@@ -55,16 +55,13 @@ function resetearJuego() {
   intentos = 0;
 }
 
-function verificarLetra(event) {
-  tecla = String(event.code);
+function verificarLetra(miLetra) {
 
-  console.log(palabra);
   encontrado = false;
 
-  miLetra = letrainput.value;
   miLetra = miLetra.toUpperCase();
 
-  if (tecla.includes("Enter")) {
+  // if (tecla.includes("Enter")) {
     if (miLetra != "") {
       indice = 0;
       for (const l of palabra.toUpperCase()) {
@@ -104,5 +101,18 @@ function verificarLetra(event) {
       alert("GANASTE!!!");
       generarPalabra();
     }
+  // }
+}
+
+function validateInput(input) {
+  var regex = /^[^0-9]*$/;
+  var isValid = regex.test(input.value);
+
+  if (!isValid) {
+      // errorMsg.style.display = 'inline';
+      input.value = input.value.replace(/[0-9]/g, '');
+  } else {
+      verificarLetra(input.value)
+      input.select()
   }
 }

@@ -8,7 +8,7 @@
     <script src="rutinas.js"></script>
 
 
-    <title>Frases</title>
+    <title>Ahorcado</title>
 </head>
 <body onload="generarPalabra()">
 <div class="contenedor">
@@ -16,7 +16,14 @@
         <h1>Juego Ahorcado (CTP Palmitas)</h1>
         <hr>
         <label for="letrainput"> Digite una letra: </label>
-        <input type="text" class="fieldletra" maxlength="1" name="letrainput" id="letrainput"  onkeyup="verificarLetra(event)"> </input>
+        <input 
+            type="text" 
+            class="fieldletra" 
+            oninput="validateInput(this)"
+            maxlength="1" 
+            name="letrainput" 
+            id="letrainput"  
+        > </input>
    
     </div>
     
